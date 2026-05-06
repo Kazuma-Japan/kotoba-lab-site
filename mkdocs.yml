@@ -1,0 +1,107 @@
+site_name: Kotoba Lab — 60-Day Japanese Speaking Challenge
+site_description: Go from "I studied Japanese but can't speak it" to having real conversations in 60 days.
+site_url: https://kazuma-japan.github.io/kotoba-lab-site/
+
+theme:
+  name: material
+  language: en
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Noto Sans JP
+    code: Roboto Mono
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+
+nav:
+  - Home: index.md
+  - Start Guide: start-guide.md
+  - Phase A — Foundation (Day 1–15):
+    - Day 1 — Meeting Someone New: phase-a/day01.md
+    - Day 2 — Daily Routine: phase-a/day02.md
+    - Day 3 — What Do You Like?: phase-a/day03.md
+    - Day 4 — Asking for Help: phase-a/day04.md
+    - Day 5 — Numbers & Counting: phase-a/day05.md
+    - Day 6 — Weather & Small Talk: phase-a/day06.md
+    - Day 7 — Describing People & Things: phase-a/day07.md
+    - Day 8 — Making Plans: phase-a/day08.md
+    - Day 9 — Talking About the Past: phase-a/day09.md
+    - Day 10 — At a Restaurant: phase-a/day10.md
+    - Day 11 — Expressing Feelings: phase-a/day11.md
+    - Day 12 — Giving Reasons: phase-a/day12.md
+    - Day 13 — Yes, No, and Maybe: phase-a/day13.md
+    - Day 14 — Talking About Abilities: phase-a/day14.md
+    - Day 15 — Review Day: phase-a/day15.md
+  - Phase B — Daily Life (Day 16–30):
+    - Day 16 — At a Convenience Store: phase-b/day16.md
+    - Day 17 — Taking the Train: phase-b/day17.md
+    - Day 18 — At a Cafe: phase-b/day18.md
+    - Day 19 — Asking Directions: phase-b/day19.md
+    - Day 20 — Not Feeling Well: phase-b/day20.md
+    - Day 21 — Shopping for Clothes: phase-b/day21.md
+    - Day 22 — At the Post Office: phase-b/day22.md
+    - Day 23 — Making a Reservation: phase-b/day23.md
+    - Day 24 — On the Phone: phase-b/day24.md
+    - Day 25 — Talking About Money: phase-b/day25.md
+    - Day 26 — At a Hotel: phase-b/day26.md
+    - Day 27 — Getting a Haircut: phase-b/day27.md
+    - Day 28 — Dealing with Problems: phase-b/day28.md
+    - Day 29 — Drinking with Coworkers: phase-b/day29.md
+    - Day 30 — Review Day: phase-b/day30.md
+  - Phase C — Expression (Day 31–45):
+    - Day 31 — Giving Your Opinion: phase-c/day31.md
+    - Day 32 — Comparing Things: phase-c/day32.md
+    - Day 33 — Making Suggestions: phase-c/day33.md
+    - Day 34 — Agreeing & Disagreeing: phase-c/day34.md
+    - Day 35 — Telling a Story: phase-c/day35.md
+    - Day 36 — Talking About the Future: phase-c/day36.md
+    - Day 37 — Explaining How Things Work: phase-c/day37.md
+    - Day 38 — Expressing Conditions: phase-c/day38.md
+    - Day 39 — Giving & Receiving: phase-c/day39.md
+    - Day 40 — Experiences & Impressions: phase-c/day40.md
+    - Day 41 — Explaining Japanese Culture: phase-c/day41.md
+    - Day 42 — Complaining & Requesting Fixes: phase-c/day42.md
+    - Day 43 — Apologizing & Forgiving: phase-c/day43.md
+    - Day 44 — Uncertainty & Guessing: phase-c/day44.md
+    - Day 45 — Review Day: phase-c/day45.md
+  - Phase D — Real World (Day 46–60):
+    - Day 46 — Casual vs. Polite: phase-d/day46.md
+    - Day 47 — Basic Keigo: phase-d/day47.md
+    - Day 48 — Honne & Tatemae: phase-d/day48.md
+    - Day 49 — Vague Expressions: phase-d/day49.md
+    - Day 50 — At the Workplace: phase-d/day50.md
+    - Day 51 — Nuanced Emotions: phase-d/day51.md
+    - Day 52 — News & Current Events: phase-d/day52.md
+    - Day 53 — Relationships: phase-d/day53.md
+    - Day 54 — Humor & Wordplay: phase-d/day54.md
+    - Day 55 — Handling Misunderstandings: phase-d/day55.md
+    - Day 56 — Short Presentation: phase-d/day56.md
+    - Day 57 — Passive & Causative: phase-d/day57.md
+    - Day 58 — Internet & SNS Language: phase-d/day58.md
+    - Day 59 — Cultural Intelligence: phase-d/day59.md
+    - Day 60 — Grand Finale: phase-d/day60.md
+  - Resources: resources.md
