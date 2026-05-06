@@ -20,7 +20,7 @@ Beyond "楽しい（たのしい）" and "嬉しい（うれしい）," how do y
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day11_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day11_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **A**: JLPT N4、受か（うか）りました！

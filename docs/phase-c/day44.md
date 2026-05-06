@@ -20,7 +20,7 @@
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day44_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day44_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **A**: 明日（あした）の天気（てんき）、どう思う（おもう）？

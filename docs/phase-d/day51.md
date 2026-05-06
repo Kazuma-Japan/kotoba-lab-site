@@ -20,7 +20,7 @@ Beyond 嬉しい（うれしい） and 悲しい（かなしい）, Japanese has
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day51_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day51_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **A**: この曲（きょく）、知って（しって）る？

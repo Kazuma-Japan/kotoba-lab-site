@@ -20,7 +20,7 @@ In Japanese culture, direct disagreement is uncomfortable. But that doesn't mean
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day34_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day34_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **A**: やっぱり英語（えいご）ができれば、日本語（にほんご）は勉強（べんきょう）しなくてもいいと思う（おもう）んだよね。

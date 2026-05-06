@@ -1,0 +1,40 @@
+:root {
+  --md-primary-fg-color: #d81b60;
+  --md-primary-fg-color--light: #f06292;
+  --md-primary-fg-color--dark: #ad1457;
+  --md-accent-fg-color: #f06292;
+}
+
+.md-header {
+  background: linear-gradient(135deg, #d81b60 0%, #f06292 100%);
+}
+
+.md-tabs {
+  background: linear-gradient(135deg, #ad1457 0%, #d81b60 100%);
+}
+
+a {
+  color: #d81b60;
+}
+
+a:hover {
+  color: #ad1457;
+}
+
+.md-nav__link--active {
+  color: #d81b60 !important;
+  font-weight: 700;
+}
+
+audio {
+  border-radius: 8px;
+  border: 2px solid #f8bbd0;
+  background: #fce4ec;
+}
+
+blockquote {
+  border-left-color: #f06292 !important;
+  background: #fce4ec;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+}

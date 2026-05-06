@@ -20,7 +20,7 @@ You're late to meet a friend. You accidentally bump into someone. You forget a p
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day43_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day43_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **A**: サムさん、30分（ふん）も遅れ（おくれ）ちゃってごめん！電車（でんしゃ）が止ま（とま）っちゃって。

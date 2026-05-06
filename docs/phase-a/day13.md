@@ -20,7 +20,7 @@ In English, "no" is just "no." In Japanese, saying "no" directly is often too bl
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day13_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day13_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **A**: 今度（こんど）の金曜日（きんようび）、飲み（のみ）に行か（いか）ない？

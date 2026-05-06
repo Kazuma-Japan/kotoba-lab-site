@@ -6,20 +6,9 @@ theme:
   name: material
   language: en
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: teal
-      accent: amber
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: teal
-      accent: amber
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
+    - scheme: default
+      primary: pink
+      accent: pink
   font:
     text: Noto Sans JP
     code: Roboto Mono
@@ -29,6 +18,9 @@ theme:
     - navigation.top
     - search.highlight
     - content.code.copy
+
+extra_css:
+  - stylesheets/sakura.css
 
 markdown_extensions:
   - admonition

@@ -20,7 +20,7 @@ Can you use chopsticks? Can you read kanji? Can you cook? Talking about abilitie
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day14_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day14_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **A**: サムさん、お箸（はし）、上手（じょうず）に使え（つかえ）ますね。

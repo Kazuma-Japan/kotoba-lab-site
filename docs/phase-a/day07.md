@@ -20,7 +20,7 @@ Someone asks you about your friend, your hometown, or a movie you watched. You n
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day07_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day07_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **A**: サムさんの地元（じもと）ってどんなところですか？

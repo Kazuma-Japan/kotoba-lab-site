@@ -20,7 +20,7 @@ The after-work drinking party (飲み会（のみかい）) is a cornerstone of 
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day29_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day29_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **幹事（かんじ）**: みなさん、今日は（こんにちは）お疲れ（つかれ）様（さま）でした！飲み放題（のみほうだい）、2時間（じかん）です。まず飲み物（のみもの）を注文（ちゅうもん）しましょう。

@@ -20,7 +20,7 @@
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day12_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day12_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **A**: どうして日本語（にほんご）を勉強（べんきょう）しているんですか？

@@ -20,7 +20,7 @@ Splitting the bill, budgeting, talking about prices — money comes up in conver
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day25_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day25_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **A**: 今日（きょう）のランチ、おいしかったね。

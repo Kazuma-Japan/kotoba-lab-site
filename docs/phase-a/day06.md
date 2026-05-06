@@ -20,7 +20,7 @@ Small talk in Japanese almost always starts with the weather. It's the universal
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day06_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day06_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **A**: いい天気（てんき）ですね。

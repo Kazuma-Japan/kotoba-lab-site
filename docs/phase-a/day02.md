@@ -20,7 +20,7 @@ Your Japanese coworker asks about your typical day. You want to describe your ro
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day02_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day02_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **A**: サムさん、毎日（まいにち）何時（なんじ）に起き（おき）ますか？

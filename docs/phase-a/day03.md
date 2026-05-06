@@ -20,7 +20,7 @@ You're having a casual chat with a new Japanese friend about hobbies and things 
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day03_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day03_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **A**: サムさん、趣味（しゅみ）は何で（なんで）すか？

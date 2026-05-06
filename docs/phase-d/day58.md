@@ -20,7 +20,7 @@ LOL = 笑（わらい）, NGL = ぶっちゃけ, It's giving = 〜み. Every lan
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day58_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day58_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **A**: 今日（きょう）バイトでお客（きゃく）さんに「日本語（にほんご）お上手（じょうず）ですね」って言わ（いわ）れたwww

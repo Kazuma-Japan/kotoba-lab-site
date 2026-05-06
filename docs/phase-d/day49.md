@@ -20,7 +20,7 @@
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day49_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day49_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **A**: 新しい（あたらしい）バイト、どう？

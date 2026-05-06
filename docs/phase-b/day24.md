@@ -20,7 +20,7 @@ Phone calls in Japanese are terrifying for learners — you can't see facial exp
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day24_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day24_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **A**: もしもし、サムですけど。

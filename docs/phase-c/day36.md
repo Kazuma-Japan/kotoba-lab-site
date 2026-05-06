@@ -20,7 +20,7 @@ Dreams, plans, goals — talking about the future requires a different set of gr
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day36_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day36_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **A**: 将来（しょうらい）の夢（ゆめ）は何で（なんで）すか？

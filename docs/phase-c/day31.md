@@ -20,7 +20,7 @@ Beyond "I like it" and "I don't like it," how do you express what you actually t
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day31_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day31_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **A**: 日本（にほん）の物価（ぶっか）、最近（さいきん）高く（たかく）なったと思い（おもい）ません？

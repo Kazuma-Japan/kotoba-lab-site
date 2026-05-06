@@ -20,7 +20,7 @@ Things go wrong — lost items, broken things, misunderstandings. How you handle
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day28_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day28_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **A**: すみません、ちょっと困っ（こまっ）ているんですけど。

@@ -27,7 +27,7 @@ Phase A で学ん（まなん）だ主要（しゅよう）パターン:
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day15_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day15_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **場面（ばめん）**: 東京（とうきょう）に着い（つい）たばかり。空港（くうこう）で知り合っ（しりあっ）た日本人（にほんじん）と渋谷（しぶや）で再会（さいかい）。

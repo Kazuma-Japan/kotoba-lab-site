@@ -20,7 +20,7 @@ The Japanese giving/receiving system (あげる・もらう・くれる) is one 
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day39_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day39_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **A**: いいイヤフォンだね。新しく（あたらしく）買っ（かっ）たの？

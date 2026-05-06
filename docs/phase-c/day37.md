@@ -20,7 +20,7 @@
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day37_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day37_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **A**: 日本（にほん）の自動販売機（じどうはんばいき）、使い方（つかいかた）がよく分か（わか）らないんだけど。

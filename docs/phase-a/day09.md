@@ -20,7 +20,7 @@ Your colleague asks about your weekend, your trip, or something you did recently
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day09_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day09_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **A**: 週末（しゅうまつ）、何を（なにを）しましたか？

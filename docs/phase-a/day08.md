@@ -20,7 +20,7 @@ Your Japanese friend invites you to hang out this weekend. You need to discuss w
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day08_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day08_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **A**: サムさん、今度（こんど）の土曜日（どようび）、暇（ひま）ですか？

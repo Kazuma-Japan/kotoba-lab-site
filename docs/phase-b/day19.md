@@ -20,7 +20,7 @@ You're lost in a Japanese city. Google Maps isn't helping, and you need to ask s
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day19_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day19_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **A**: すみません、東京（とうきょう）タワーはどう行け（いけ）ばいいですか？

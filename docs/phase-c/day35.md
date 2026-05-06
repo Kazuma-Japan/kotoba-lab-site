@@ -20,7 +20,7 @@
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day35_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day35_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **A**: この前（まえ）、面白い（おもしろい）ことがあったんだけど、聞い（きい）てくれる？

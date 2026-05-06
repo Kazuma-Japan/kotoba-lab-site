@@ -20,7 +20,7 @@
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day48_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day48_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **A**: 今度（こんど）、うちで鍋（なべ）パーティーしない？

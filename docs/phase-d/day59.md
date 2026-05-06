@@ -20,7 +20,7 @@ Speaking perfect Japanese means nothing if you make cultural mistakes. Today is 
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day59_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day59_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **A**: 来週（らいしゅう）、日本（にほん）の取引先（とりひきさき）と初めて（はじめて）会う（あう）んだけど、何か（なにか）気を（きを）つけることある？

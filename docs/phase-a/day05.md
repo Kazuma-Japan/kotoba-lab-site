@@ -21,7 +21,7 @@ You're shopping in Japan and need to deal with prices, quantities, and counters.
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day05_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day05_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **A**: いらっしゃいませ！

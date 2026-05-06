@@ -20,7 +20,7 @@ You've been using ですます form all along. But in real Japan, people constan
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day46_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day46_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **丁寧（ていねい）バージョン:**

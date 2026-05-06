@@ -20,7 +20,7 @@ Your friends back home ask about Japan. "What's that bowing thing?" "Why do peop
 
 
 <audio controls style="width:100%; margin: 1em 0;">
-  <source src="../audio/Day41_conversation.mp3" type="audio/mpeg">
+  <source src="../../audio/Day41_conversation.mp3" type="audio/mpeg">
 </audio>
 
 **A**: 日本人（にほんじん）ってなんでいつもお辞儀（じぎ）するの？
