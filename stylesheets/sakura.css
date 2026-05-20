@@ -1,40 +1,456 @@
+/* =============================================================
+   Kotoba Lab — 60-Day Japanese Speaking Challenge
+   Theme + UX styles
+   ============================================================= */
+
 :root {
   --md-primary-fg-color: #d81b60;
   --md-primary-fg-color--light: #f06292;
   --md-primary-fg-color--dark: #ad1457;
   --md-accent-fg-color: #f06292;
+
+  /* Brand palette extras */
+  --kl-pink-50:  #fff1f5;
+  --kl-pink-100: #fce4ec;
+  --kl-pink-200: #f8bbd0;
+  --kl-pink-300: #f48fb1;
+  --kl-pink-500: #d81b60;
+  --kl-pink-700: #ad1457;
+
+  --kl-blue-50:  #eef5ff;
+  --kl-blue-100: #dbeafe;
+  --kl-blue-300: #93c5fd;
+  --kl-blue-500: #2563eb;
+  --kl-blue-700: #1d4ed8;
+
+  --kl-green-50: #ecfdf5;
+  --kl-green-300: #6ee7b7;
+  --kl-green-700: #047857;
+
+  --kl-purple-50: #f5f3ff;
+  --kl-purple-300: #c4b5fd;
+  --kl-purple-700: #6d28d9;
+
+  --kl-amber-50: #fffbeb;
+  --kl-amber-300: #fcd34d;
+  --kl-amber-700: #b45309;
+
+  --kl-gray-50:  #f8fafc;
+  --kl-gray-100: #f1f5f9;
+  --kl-gray-200: #e2e8f0;
+  --kl-gray-500: #64748b;
+  --kl-gray-700: #334155;
+  --kl-gray-900: #0f172a;
+
+  --kl-radius: 12px;
+  --kl-radius-sm: 8px;
+  --kl-shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --kl-shadow-md: 0 4px 12px rgba(216, 27, 96, 0.08);
 }
 
+/* ---------- Header / nav ---------- */
 .md-header {
   background: linear-gradient(135deg, #d81b60 0%, #f06292 100%);
 }
-
 .md-tabs {
   background: linear-gradient(135deg, #ad1457 0%, #d81b60 100%);
 }
-
-a {
-  color: #d81b60;
-}
-
-a:hover {
-  color: #ad1457;
-}
-
+a { color: var(--kl-pink-500); }
+a:hover { color: var(--kl-pink-700); }
 .md-nav__link--active {
-  color: #d81b60 !important;
+  color: var(--kl-pink-500) !important;
   font-weight: 700;
 }
 
-audio {
-  border-radius: 8px;
-  border: 2px solid #f8bbd0;
-  background: #fce4ec;
+/* ---------- Typography defaults ---------- */
+.md-typeset {
+  line-height: 1.75;
+}
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  letter-spacing: 0.01em;
+}
+.md-typeset h2 {
+  margin-top: 2em;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid var(--kl-pink-100);
+}
+.md-typeset h3 {
+  margin-top: 1.8em;
+  color: var(--kl-pink-700);
 }
 
-blockquote {
-  border-left-color: #f06292 !important;
-  background: #fce4ec;
-  padding: 0.5em 1em;
-  border-radius: 4px;
+/* ---------- Audio player ---------- */
+audio {
+  width: 100%;
+  border-radius: var(--kl-radius-sm);
+  border: 2px solid var(--kl-pink-200);
+  background: var(--kl-pink-100);
+}
+.md-typeset p audio {
+  margin: 0.5em 0 1em;
+}
+
+/* ---------- Blockquote (Goal/Tip) ---------- */
+.md-typeset blockquote {
+  border-left: 4px solid var(--kl-pink-300) !important;
+  background: var(--kl-pink-50);
+  padding: 0.75em 1em;
+  border-radius: 0 var(--kl-radius-sm) var(--kl-radius-sm) 0;
+  color: var(--kl-gray-700);
+}
+
+/* ---------- Key phrases list ---------- */
+.md-typeset ul.keyphrase-list {
+  list-style: none;
+  padding-left: 0;
+}
+.md-typeset ul.keyphrase-list > li {
+  background: var(--kl-pink-50);
+  border-left: 3px solid var(--kl-pink-300);
+  padding: 0.6em 0.9em;
+  margin: 0.45em 0;
+  border-radius: 0 var(--kl-radius-sm) var(--kl-radius-sm) 0;
+  line-height: 1.8;
+}
+.md-typeset ul.keyphrase-list > li strong {
+  color: var(--kl-pink-700);
+  font-weight: 700;
+}
+.md-typeset ul.keyphrase-list > li::marker {
+  content: "";
+}
+
+/* ===============================================================
+   DIALOGUE — model conversation
+   =============================================================== */
+.dialogue-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  margin: 1em 0 1.5em;
+}
+
+.dialogue-line {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35em;
+  padding: 0.85em 1em 0.95em;
+  border-radius: var(--kl-radius);
+  border: 1px solid transparent;
+  box-shadow: var(--kl-shadow-sm);
+  position: relative;
+  max-width: 100%;
+}
+
+.dialogue-name {
+  font-size: 0.78em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  align-self: flex-start;
+  padding: 0.18em 0.7em;
+  border-radius: 999px;
+  color: #fff;
+  line-height: 1.4;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dialogue-text {
+  font-size: 1em;
+  line-height: 1.85;
+  color: var(--kl-gray-900);
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
+/* Speaker 1 — pink (left-aligned bubble) */
+.dialogue-speaker-1 {
+  background: var(--kl-pink-50);
+  border-color: var(--kl-pink-100);
+  margin-right: clamp(0px, 8%, 56px);
+}
+.dialogue-speaker-1 .dialogue-name {
+  background: var(--kl-pink-500);
+}
+
+/* Speaker 2 — blue (right-aligned bubble) */
+.dialogue-speaker-2 {
+  background: var(--kl-blue-50);
+  border-color: var(--kl-blue-100);
+  margin-left: clamp(0px, 8%, 56px);
+}
+.dialogue-speaker-2 .dialogue-name {
+  background: var(--kl-blue-500);
+  align-self: flex-end;
+}
+.dialogue-speaker-2 .dialogue-text {
+  text-align: left;
+}
+
+/* Speaker 3+ — extras */
+.dialogue-speaker-3 {
+  background: var(--kl-green-50);
+  border-color: #d1fae5;
+}
+.dialogue-speaker-3 .dialogue-name {
+  background: var(--kl-green-700);
+}
+.dialogue-speaker-4 {
+  background: var(--kl-purple-50);
+  border-color: #ede9fe;
+}
+.dialogue-speaker-4 .dialogue-name {
+  background: var(--kl-purple-700);
+}
+.dialogue-speaker-5 {
+  background: var(--kl-amber-50);
+  border-color: #fef3c7;
+}
+.dialogue-speaker-5 .dialogue-name {
+  background: var(--kl-amber-700);
+}
+.dialogue-speaker-6 {
+  background: var(--kl-gray-100);
+  border-color: var(--kl-gray-200);
+}
+.dialogue-speaker-6 .dialogue-name {
+  background: var(--kl-gray-700);
+}
+
+/* Scene divider (場面1: ホテル など) */
+.dialogue-scene {
+  margin: 0.8em 0 0.2em;
+  padding: 0.55em 0.9em;
+  background: var(--kl-gray-50);
+  border-left: 4px solid var(--kl-gray-500);
+  border-radius: 0 var(--kl-radius-sm) var(--kl-radius-sm) 0;
+  color: var(--kl-gray-700);
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+.dialogue-scene-label {
+  font-weight: 700;
+  color: var(--kl-gray-900);
+}
+
+.dialogue-aside {
+  padding: 0.6em 0.9em;
+  background: #fff;
+  border: 1px dashed var(--kl-gray-200);
+  border-radius: var(--kl-radius-sm);
+  color: var(--kl-gray-700);
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .dialogue-speaker-1,
+  .dialogue-speaker-2,
+  .dialogue-speaker-3,
+  .dialogue-speaker-4,
+  .dialogue-speaker-5,
+  .dialogue-speaker-6 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .dialogue-line {
+    padding: 0.75em 0.85em 0.85em;
+  }
+  .dialogue-text {
+    font-size: 0.98em;
+    line-height: 1.8;
+  }
+}
+
+/* ===============================================================
+   SPRINT — 瞬間翻訳スプリント (card-based)
+   =============================================================== */
+.sprint-set {
+  margin: 1.2em 0 1.8em;
+}
+.sprint-set-title {
+  display: inline-block;
+  padding: 0.35em 0.95em;
+  margin-bottom: 0.8em;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, var(--kl-pink-500), var(--kl-pink-700));
+  border-radius: 999px;
+  font-size: 0.95em;
+  letter-spacing: 0.02em;
+  box-shadow: var(--kl-shadow-sm);
+}
+
+.sprint-card {
+  display: flex;
+  gap: 0.9em;
+  align-items: stretch;
+  padding: 0.9em 1em 1em;
+  margin: 0.55em 0;
+  background: #fff;
+  border: 1px solid var(--kl-gray-200);
+  border-radius: var(--kl-radius);
+  box-shadow: var(--kl-shadow-sm);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.sprint-card:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--kl-shadow-md);
+  border-color: var(--kl-pink-200);
+}
+
+.sprint-num {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2em;
+  height: 2em;
+  min-width: 2em;
+  border-radius: 50%;
+  background: var(--kl-pink-100);
+  color: var(--kl-pink-700);
+  font-weight: 700;
+  font-size: 0.95em;
+  line-height: 1;
+}
+
+.sprint-content {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45em;
+}
+
+.sprint-en {
+  color: var(--kl-gray-700);
+  font-size: 0.98em;
+  line-height: 1.7;
+  font-style: normal;
+}
+
+.sprint-arrow {
+  align-self: flex-start;
+  color: var(--kl-pink-300);
+  font-size: 1.1em;
+  line-height: 1;
+  user-select: none;
+}
+
+.sprint-ja {
+  color: var(--kl-gray-900);
+  font-size: 1.05em;
+  font-weight: 600;
+  line-height: 1.85;
+}
+
+@media (max-width: 600px) {
+  .sprint-card {
+    padding: 0.8em 0.9em 0.9em;
+    gap: 0.7em;
+  }
+  .sprint-num {
+    width: 1.8em;
+    height: 1.8em;
+    min-width: 1.8em;
+    font-size: 0.9em;
+  }
+  .sprint-ja {
+    font-size: 1em;
+  }
+}
+
+/* ===============================================================
+   Scenario intro & grammar tip
+   =============================================================== */
+.md-typeset p.goal-banner {
+  background: linear-gradient(135deg, var(--kl-pink-50), #ffe4ef);
+  border: 1px solid var(--kl-pink-200);
+  border-left: 5px solid var(--kl-pink-500);
+  padding: 0.85em 1.1em;
+  border-radius: var(--kl-radius);
+  margin: 1em 0 1.2em;
+  line-height: 1.75;
+}
+.md-typeset p.goal-banner strong {
+  color: var(--kl-pink-700);
+  font-weight: 700;
+  margin-right: 0.25em;
+}
+
+.md-typeset p.grammar-tip {
+  background: #fffdf2;
+  border: 1px solid #fde68a;
+  border-left: 5px solid #f59e0b;
+  padding: 0.85em 1.1em;
+  border-radius: var(--kl-radius);
+  margin: 1em 0 1.2em;
+  line-height: 1.85;
+  color: var(--kl-gray-900);
+}
+
+/* ===============================================================
+   AI practice template — code block dress-up
+   =============================================================== */
+.md-typeset pre.ai-template,
+.md-typeset div.ai-template {
+  border-left: 4px solid var(--kl-pink-500);
+  border-radius: var(--kl-radius);
+  overflow: hidden;
+  margin: 1em 0 1.4em;
+}
+.md-typeset div.ai-template pre,
+.md-typeset div.ai-template > pre {
+  margin: 0;
+}
+
+/* ===============================================================
+   Tables (index / resources)
+   =============================================================== */
+.md-typeset table:not([class]) {
+  border-radius: var(--kl-radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--kl-gray-200);
+  box-shadow: var(--kl-shadow-sm);
+}
+.md-typeset table:not([class]) th {
+  background: var(--kl-pink-50);
+  color: var(--kl-pink-700);
+  font-weight: 700;
+}
+.md-typeset table:not([class]) tr:nth-child(even) {
+  background: var(--kl-gray-50);
+}
+
+/* ===============================================================
+   Misc readability tweaks
+   =============================================================== */
+
+/* AI practice template code block */
+.md-typeset pre > code {
+  font-size: 0.9em;
+  line-height: 1.7;
+}
+
+/* Horizontal rule between days */
+.md-typeset hr {
+  margin: 2.5em 0;
+  border: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--kl-pink-200),
+    transparent
+  );
+}
+
+/* Tighten paragraph spacing inside sprint blocks (already replaced — safety) */
+.sprint-set + .sprint-set {
+  margin-top: 1.4em;
 }
