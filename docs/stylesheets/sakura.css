@@ -122,6 +122,20 @@ audio {
   content: "";
 }
 
+/* Day 60 bold-labelled summary paragraphs (Phase A/B/C/D recap) */
+.md-typeset p.keyphrase-summary {
+  background: var(--kl-pink-50);
+  border-left: 3px solid var(--kl-pink-300);
+  padding: 0.7em 0.95em;
+  margin: 0.55em 0;
+  border-radius: 0 var(--kl-radius-sm) var(--kl-radius-sm) 0;
+  line-height: 1.85;
+}
+.md-typeset p.keyphrase-summary strong {
+  color: var(--kl-pink-700);
+  font-weight: 700;
+}
+
 /* ===============================================================
    DIALOGUE — model conversation
    =============================================================== */

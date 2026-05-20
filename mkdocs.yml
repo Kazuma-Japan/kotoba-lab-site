@@ -20,11 +20,11 @@ theme:
     - content.code.copy
 
 extra_css:
-  - stylesheets/sakura.css?v=20260520c
+  - stylesheets/sakura.css?v=20260520d
 
 extra_javascript:
   - https://unpkg.com/wanakana@5.3.1/wanakana.min.js
-  - javascripts/enhance.js?v=20260520c
+  - javascripts/enhance.js?v=20260520d
 
 markdown_extensions:
   - admonition
