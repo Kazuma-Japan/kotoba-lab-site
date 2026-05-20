@@ -22,6 +22,9 @@ theme:
 extra_css:
   - stylesheets/sakura.css
 
+extra_javascript:
+  - javascripts/enhance.js
+
 markdown_extensions:
   - admonition
   - pymdownx.details
