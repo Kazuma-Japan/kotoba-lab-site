@@ -428,6 +428,36 @@ audio {
 }
 
 /* ===============================================================
+   Romaji reading helper
+   =============================================================== */
+.romaji {
+  display: block;
+  margin-top: 0.25em;
+  margin-bottom: 0.15em;
+  font-size: 0.78em;
+  color: var(--kl-gray-500);
+  font-family: "Roboto Mono", "SFMono-Regular", Menlo, monospace;
+  font-style: normal;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+}
+.romaji-inline {
+  /* Inline-block kana under <strong> inside a list item */
+  display: block;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+.md-typeset ul.keyphrase-list > li strong + .romaji-inline {
+  color: var(--kl-pink-700);
+  opacity: 0.7;
+}
+.sprint-ja + .romaji {
+  margin-top: 0.35em;
+  font-size: 0.82em;
+}
+
+/* ===============================================================
    Misc readability tweaks
    =============================================================== */
 

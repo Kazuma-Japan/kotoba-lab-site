@@ -19,6 +19,7 @@
     enhanceScenarioIntro(article);
     enhanceGrammarPoint(article);
     enhanceAITemplate(article);
+    addRomaji(article);
   }
 
   // ---------- Dialogue ----------
@@ -234,6 +235,76 @@
         node = node.nextElementSibling;
       }
     });
+  }
+
+  // ---------- Romaji augmentation ----------
+  // Adds a romaji reading under each key-phrase headword and each sprint Japanese line.
+  function addRomaji(article) {
+    if (typeof window.wanakana === "undefined") return;
+
+    // ② Key phrases: <ul class="keyphrase-list"> > li > <strong>headword</strong>
+    article
+      .querySelectorAll("ul.keyphrase-list > li > strong:first-child")
+      .forEach((el) => {
+        if (el.dataset.romajied === "1") return;
+        const ja = el.textContent || "";
+        const romaji = jaToRomaji(ja);
+        if (!romaji || !hasJa(ja)) return;
+        el.dataset.romajied = "1";
+        const span = document.createElement("span");
+        span.className = "romaji romaji-inline";
+        span.textContent = romaji;
+        // Insert after the <strong>
+        el.parentNode.insertBefore(span, el.nextSibling);
+      });
+
+    // ④ Sprint cards: .sprint-ja
+    article.querySelectorAll(".sprint-ja").forEach((el) => {
+      if (el.dataset.romajied === "1") return;
+      const ja = el.textContent || "";
+      const romaji = jaToRomaji(ja);
+      if (!romaji || !hasJa(ja)) return;
+      el.dataset.romajied = "1";
+      const div = document.createElement("div");
+      div.className = "romaji";
+      div.textContent = romaji;
+      el.parentNode.insertBefore(div, el.nextSibling);
+    });
+  }
+
+  function hasJa(s) {
+    return /[぀-ヿ一-龯]/.test(s);
+  }
+
+  function jaToRomaji(text) {
+    if (!text) return "";
+    // 1) 漢字（ふりがな） → ふりがな（前後にスペース挿入し、単語境界として扱う）
+    let s = text.replace(
+      /([一-龯々]+[぀-ゟ]*)（([぀-ゟ゠-ヿ]+)）/g,
+      " $2 "
+    );
+    // 2) 文字種境界（ひらがな↔カタカナ）にスペース
+    s = s.replace(/([぀-ゟ])([゠-ヿ])/g, "$1 $2");
+    s = s.replace(/([゠-ヿ])([぀-ゟ])/g, "$1 $2");
+    // 3) 「〜」「・」記号の周辺にスペース（独立記号として扱う）
+    s = s.replace(/([〜・])/g, " $1 ");
+    // 4) 句読点の後にスペース
+    s = s.replace(/([。、！？!?])/g, "$1 ");
+    // 4b) 連続する数字の前後にスペース（混在ローマ字との区別）
+    s = s.replace(/(\d+)/g, " $1 ");
+    // (Note: 単一助詞や2文字助詞の機械的分割は誤分割が多発するため行わない。
+    //  「漢字（読み）」境界とカタカナ↔ひらがな境界のみで自然な単語分割を得る。)
+    // 5) wanakana で変換
+    try {
+      let r = window.wanakana.toRomaji(s);
+      // 6) 整形: 連続スペースを 1 つに
+      r = r.replace(/\s+/g, " ").trim();
+      // 句読点の前のスペースを除去
+      r = r.replace(/\s+([.,!?])/g, "$1");
+      return r;
+    } catch (e) {
+      return "";
+    }
   }
 
   function escapeAttr(s) {
