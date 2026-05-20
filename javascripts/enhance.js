@@ -16,6 +16,7 @@
     enhanceDialogue(article);
     enhanceSprint(article);
     enhanceKeyPhrases(article);
+    enhancePseudoDashLists(article);
     enhanceScenarioIntro(article);
     enhanceGrammarPoint(article);
     enhanceAITemplate(article);
@@ -177,11 +178,93 @@
       if (!/キーフレーズ/.test(h3.textContent || "")) return;
       let node = h3.nextElementSibling;
       while (node && !/^H[1-3]$/.test(node.tagName)) {
+        const next = node.nextElementSibling;
         if (node.tagName === "UL") {
           node.classList.add("keyphrase-list");
+        } else if (node.tagName === "P") {
+          // Two recoverable cases when markdown didn't produce a <ul>:
+          // (a) "- item\n- item" baked into a <p> with no preceding blank line
+          // (b) bold-labelled paragraphs like "<strong>Phase A</strong>: list..."
+          const html = node.innerHTML;
+          const lines = html.split(/\n+/).map((l) => l.trim()).filter(Boolean);
+          const dashLines = lines.filter((l) => /^[-•]\s+/.test(l));
+          if (dashLines.length >= 3) {
+            const ul = document.createElement("ul");
+            ul.className = "keyphrase-list";
+            // The leading intro line (e.g. "Phase A で学んだ...") stays above the list.
+            const intro = [];
+            const items = [];
+            for (const l of lines) {
+              if (/^[-•]\s+/.test(l)) {
+                items.push(l.replace(/^[-•]\s+/, ""));
+              } else {
+                intro.push(l);
+              }
+            }
+            // Render: keep intro as a separate <p>, then ul
+            const introP = document.createElement("p");
+            introP.innerHTML = intro.join(" ");
+            for (const it of items) {
+              const li = document.createElement("li");
+              li.innerHTML = it;
+              ul.appendChild(li);
+            }
+            const frag = document.createDocumentFragment();
+            if (intro.length) frag.appendChild(introP);
+            frag.appendChild(ul);
+            node.replaceWith(frag);
+          } else if (
+            /^<strong>[^<]+<\/strong>\s*[:：]/.test(html.trim()) &&
+            /[、,]/.test(html)
+          ) {
+            // bold-labelled comma-separated list (day60-style)
+            node.classList.add("keyphrase-summary");
+          }
         }
-        node = node.nextElementSibling;
+        node = next;
       }
+    });
+  }
+
+  // ---------- Pseudo dash lists (any <p> with "- " baked in) ----------
+  // Catches sections like day60 graduation roadmap where the markdown
+  // had no blank line before the dashes.
+  function enhancePseudoDashLists(article) {
+    const ps = article.querySelectorAll(".md-typeset p, .md-content p");
+    ps.forEach((p) => {
+      if (p.dataset.dashDone === "1") return;
+      if (p.classList.contains("goal-banner")) return;
+      if (p.classList.contains("grammar-tip")) return;
+      if (p.classList.contains("keyphrase-summary")) return;
+      if (p.closest(".dialogue-block, .sprint-set, ul.keyphrase-list"))
+        return;
+      const html = p.innerHTML;
+      const lines = html.split(/\n+/).map((l) => l.trim()).filter(Boolean);
+      const dashLines = lines.filter((l) => /^[-•]\s+/.test(l));
+      if (dashLines.length < 3) return;
+      p.dataset.dashDone = "1";
+
+      const intro = [];
+      const items = [];
+      for (const l of lines) {
+        if (/^[-•]\s+/.test(l)) items.push(l.replace(/^[-•]\s+/, ""));
+        else intro.push(l);
+      }
+      const ul = document.createElement("ul");
+      ul.className = "keyphrase-list";
+      for (const it of items) {
+        const li = document.createElement("li");
+        li.innerHTML = it;
+        ul.appendChild(li);
+      }
+      const frag = document.createDocumentFragment();
+      if (intro.length) {
+        const introP = document.createElement("p");
+        introP.innerHTML = intro.join(" ");
+        frag.appendChild(introP);
+      }
+      frag.appendChild(ul);
+      p.replaceWith(frag);
     });
   }
 
@@ -278,9 +361,14 @@
 
   function jaToRomaji(text) {
     if (!text) return "";
+    // 0) 「ヶ」「ヵ」をひらがな「か」に正規化（wanakana が ka と読めるように）
+    text = text.replace(/[ヶヵ]/g, "か");
     // 1) 漢字（ふりがな） → ふりがな（前後にスペース挿入し、単語境界として扱う）
+    //    「見に行き（みにいき）」「引っ越す（ひっこす）」のような
+    //    漢字とひらがなが交互に続く複合語にも対応するため、
+    //    [漢字][漢字orひらがな]* で連続部分を貪欲にキャプチャする。
     let s = text.replace(
-      /([一-龯々]+[぀-ゟ]*)（([぀-ゟ゠-ヿ]+)）/g,
+      /([一-龯々][一-龯々ぁ-ゟ゠-ヿ]*)（([ぁ-ゟ゠-ヿ]+)）/g,
       " $2 "
     );
     // 2) 文字種境界（ひらがな↔カタカナ）にスペース
