@@ -20,10 +20,10 @@ theme:
     - content.code.copy
 
 extra_css:
-  - stylesheets/sakura.css
+  - stylesheets/sakura.css?v=20260520a
 
 extra_javascript:
-  - javascripts/enhance.js
+  - javascripts/enhance.js?v=20260520a
 
 markdown_extensions:
   - admonition
